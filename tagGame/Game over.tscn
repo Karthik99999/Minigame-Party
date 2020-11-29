@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tagGame/Button.gd" type="Script" id=2]
+
+
+[node name="Game over" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 272.0
+margin_top = 92.0
+margin_right = 348.0
+margin_bottom = 106.0
+rect_scale = Vector2( 6.67438, 7.7 )
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 376.425
+margin_top = 245.611
+margin_right = 482.425
+margin_bottom = 259.611
+rect_scale = Vector2( 2.8, 2.88 )
+text = "Player One Wins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameOver" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+
+[node name="Button" type="Button" parent="."]
+margin_left = 430.568
+margin_top = 382.836
+margin_right = 490.568
+margin_bottom = 403.836
+rect_scale = Vector2( 3.30014, 3.17325 )
+text = "Restart"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

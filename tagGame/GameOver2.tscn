@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="GameOver2" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ -529.483 ]
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 283.172
+margin_top = 268.799
+margin_right = 387.172
+margin_bottom = 282.799
+rect_scale = Vector2( 4.69411, 5.85426 )
+text = "Player Two Wins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 93.0
+margin_top = 68.0
+margin_right = 169.0
+margin_bottom = 82.0
+rect_scale = Vector2( 11.1283, 11.9595 )
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}

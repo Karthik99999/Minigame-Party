@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SpaceShooters/Spaceship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/spaceship2.png" type="Texture" id=2]
+[ext_resource path="res://assets/space.png" type="Texture" id=3]
+[ext_resource path="res://SpaceShooters/SpaceShooters.gd" type="Script" id=4]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="GameOverDialog" type="ConfirmationDialog" parent="."]
+pause_mode = 2
+margin_left = 411.466
+margin_top = 252.112
+margin_right = 611.466
+margin_bottom = 322.112
+window_title = "Game Over"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 510.799, 43.5754 )
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 514.424, 547.561 )
+player_no = 2
+
+[node name="Sprite" parent="Player2" index="0"]
+texture = ExtResource( 2 )
+
+[node name="Border" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
+position = Vector2( 1.18921, -1.18921 )
+polygon = PoolVector2Array( -26.6663, -7.79901, 1028.16, -7.79901, 1028.16, 604.643, -5.26053, 603.453, -2.88211, -6.6098, -29.0446, -8.98822, -29.0446, 634.373, 1055.51, 636.751, 1055.51, -39.9076, -26.6663, -35.1508 )
+[connection signal="confirmed" from="GameOverDialog" to="." method="restart_game"]
+
+[editable path="Player2"]

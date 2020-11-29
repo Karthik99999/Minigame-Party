@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Text/Roboto-Bold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 73
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 73
+font_data = ExtResource( 1 )
+
+[node name="HUD" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointsDisplay" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_left = 267.3
+margin_top = 15.7401
+margin_right = 386.3
+margin_bottom = 101.74
+rect_scale = Vector2( 3.19357, 1.86345 )
+custom_constants/separation = 75
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScorePlayer1" type="Label" parent="PointsDisplay"]
+margin_right = 42.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="ScorePlayer2" type="Label" parent="PointsDisplay"]
+margin_left = 117.0
+margin_right = 159.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
